@@ -65,8 +65,8 @@ class Order extends React.Component {
                     className="order"
                     component="ul"
                     transitionName="order"
-                    TransitionEnterTimeout={500}
-                    TransitionLeaveTimeout={500}
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={500}
                 >
                     {orderIds.map(this.renderOrder)}
                     <li className="total">
@@ -78,5 +78,11 @@ class Order extends React.Component {
         )
     }
 }
+
+Order.propTypes = {
+    fishes: React.PropTypes.object.isRequired,
+    order: React.PropTypes.object.isRequired,
+    removeFromOrder: React.PropTypes.func.isRequired,
+};
 
 export default Order

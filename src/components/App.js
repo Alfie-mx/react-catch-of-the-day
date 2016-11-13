@@ -120,7 +120,6 @@ class App extends React.Component {
 
                 <Order fishes={this.state.fishes}
                        order={this.state.order}
-                       params={this.props.params}
                        removeFromOrder={this.removeFromOrder}
                 />
 
@@ -135,5 +134,9 @@ class App extends React.Component {
         )
     }
 }
+
+App.propTypes = {
+    params: React.PropTypes.object.isRequired
+};
 
 export default App
